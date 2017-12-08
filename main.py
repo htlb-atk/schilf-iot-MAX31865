@@ -3,7 +3,7 @@ import machine
 from network import WLAN
 from umqtt.robust import MQTTClient
 
-from MAX31865 import MAX31865
+from lopy_max31865 import MAX31865
 
 # connect to WLAN
 wlan = WLAN(mode=WLAN.STA)
