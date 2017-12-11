@@ -12,7 +12,7 @@ for net in nets:
     # if net.ssid == 'WLAN-HTLB':
     if net.ssid == 'WLAN-HTLB':
         print('Network found!')
-        wlan.connect(net.ssid, auth=(WLAN.WPA2, '***REMOVED***'), timeout=5000)
+        wlan.connect(net.ssid, auth=(WLAN.WPA2, 'xxxxxxxxxx'), timeout=5000)
         while not wlan.isconnected():
             machine.idle() # save power while waiting
         print('WLAN connection succeeded!')
@@ -22,14 +22,14 @@ for net in nets:
 rtd = MAX31865()
 
 # Connect to thingspeak; password= MQTT API Key
-thingspeak = MQTTClient("fe058e3f82b94a968fb8bc105b36dc", "52.5.134.229", port=1883, user="atkhtlb", password="***REMOVED***")
+thingspeak = MQTTClient("fe058e3f82b94a968fb8bc105b36dc", "52.5.134.229", port=1883, user="atkhtlb", password="MQTT_API_KEY")
 thingspeak.DEBUG = True
 thingspeak.connect(clean_session=True)
 while True:
     temp = rtd.read()
     print('Temperatur: ',temp)
     # publish temp
-    thingspeak.publish("channels/347424/publish/fields/field1/***REMOVED***",str(temp));
+    thingspeak.publish("channels/347424/publish/fields/field1/WRITE_API_KEY",str(temp));
 
     time.sleep(30)
 thingspeak.disconnect()
