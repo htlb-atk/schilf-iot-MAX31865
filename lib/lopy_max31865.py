@@ -43,7 +43,7 @@ class MAX31865():
           config = config + MAX31865_CONFIG_3WIRE
 
       buf = bytearray(2)
-      buf[0] = MAX31865_REG_WRITE_CONFIG  # config write address
+      buf[0] = self.MAX31865_REG_WRITE_CONFIG  # config write address
       buf[1] = config
       self.CS(False)                      # Select chip
       nw=self.spi.write(buf)              # write config
