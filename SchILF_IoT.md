@@ -1,3 +1,6 @@
+---
+title: SchiLF IoT
+---
 # Übersicht
 
 In diesem Workshop erstellen wir gemeinsam eine einfache IoT Anwendung.
