@@ -14,7 +14,7 @@ zu groß ist, wird eine E-Mail Nachricht auf das Handy gesendet.
 
 ## Komponenten einer IoT Anwendung
 
-![](.//media/image2.png)
+![]image2.png)
 
 Mindmap IoT als PDF-Datei: [<span class="underline">IoT.pdf</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=0f2758075762c4ff18f91d79d206468d7&authkey=AVAY-_c2--MxgPPGsrOa8bg&e=946d00393fd5464b8f9d54a7a739512b)
 
@@ -28,7 +28,7 @@ Service bereit. Die Temperaturwerte analysieren wir mit Hilfe von
 MATLAB. Die Visualisierung erfolgt auf einem Dashboard. Mit IFTTT (If
 This Than That) realisieren wir eine Reaktion auf die Auswertung.
 
-![](.//media/image3.png)
+![](./media/image3.png)
 
 Mindmap als PDF-Datei: [<span class="underline">IoT\_Workshop.pdf</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=03fac0ee75c234667905f7408bf1c6b60&authkey=AeHiCcWbcm5gJ38ofemFalY&e=e57406c916094c6386dba333a0de2931)
 
@@ -45,7 +45,7 @@ Der Workshop gliedert sich in folgende Teilaufgaben:
 
 ## Übersicht Datenfluss und Kommunikation
 
-![](.//media/image4.png)
+![](./media/image4.png)
 
 # Das „Ding“: LoPy
 
@@ -61,15 +61,15 @@ Der Stromverbrauch im Deep-sleep beträgt nur ca. 25µA.
 Ein eingebauter MicroPython Interpreter ermöglicht eine einfache
 Programmierung.
 
-![](.//media/image5.png)
+![](./media/image5.png)
 
 Für Eigenentwicklungen sind auch OEM Boards erhältlich.
 
-![](.//media/image6.png)
+![](./media/image6.png)
 
 ## Expansion Board
 
-![](.//media/image7.png)Die Hard- und Softwareentwicklung wird durch das
+![](./media/image7.png)Die Hard- und Softwareentwicklung wird durch das
 Expansion Board erleichtert:
 
   - LoPy Anschlüsse auf Pfosten geführt,
@@ -78,7 +78,7 @@ Expansion Board erleichtert:
   - eine LED und ein Taster
   - MicroSD-Karten Slot
 
-![](.//media/image8.png)
+![](./media/image8.png)
 
 ## Atom Editor mit pymakr plug-in
 
@@ -89,11 +89,11 @@ speziellen Plug-In für die Kommunikation mit dem LoPy.
 
 > Aktivität: Verbindung zum LoPy herstellen.
 
-  1. Atom Editor starten ![](.//media/image9.png)
+  1. Atom Editor starten ![](./media/image9.png)
   2. Für die Screenshots wurde das Thema von „Atom Dark“ auf „Atom Light“
     umgestellt.  
     File --> Settings --> Themes
-    ![](.//media/image10.png)
+    ![](./media/image10.png)
   3. Der LoPy wird an eine USB-Schnittstelle angeschlossen und von dort
     auch mit Energie versorgt. Auf dem PC erscheint die Verbindung als
     zusätzliche COM-Schnittstelle.
@@ -106,10 +106,10 @@ speziellen Plug-In für die Kommunikation mit dem LoPy.
     werden.  
     Mit MoreGet Serial Ports werden alle erkannten Schnittstellen
     angezeigt.  
-    ![](.//media/image11.png)
+    ![](./media/image11.png)
     Unter Settings Global Settings Device Address wird die höchste COM
     eingetragen (Strg-v).
-    ![](.//media/image12.png)
+    ![](./media/image12.png)
 
 # Temperaturmessung
 
@@ -121,17 +121,17 @@ Auswertung von PT100 und PT1000 Elementen geeignet. Die Kommunikation
 mit dem LoPy erfolgt über das SPI-Bus Interface.  
 [<span class="underline">Datenblatt MAX31865</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=0092d8dc759404bde9f372b9aacc891cd&authkey=AdsadokQa5XxAF3X3ueB76w&e=941dfe278d4441e68b2792e1083d88ac).  
 Wir verwenden das Interface Board "Adafruit PT100 RTD Temperature Sensor Amplifier - MAX31865". Das Board ist unter anderem mit einem MAX31865 und einem Referenzwiderstand mit 430Ω bestückt.
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid611F64C4-7D34-D44A-8CAF-DEB09F05A9BE.png](.//media/image13.png)
+![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid611F64C4-7D34-D44A-8CAF-DEB09F05A9BE.png](./media/image13.png)
 Datenblatt: [<span class="underline">adafruit-max31865-rtd-pt100-amplifier.pdf</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=014df33fd28e341c08a08d9b782fb8956&authkey=AY4nZZwKZd7xComsOIjaQv4&e=0a0445e276ea49a48095c602c153ad66)
 ### Verdrahtung LoPy - MAX31865 Interface Board
-![Verdrahtung LoPy](.//media/image14.png)
+![Verdrahtung LoPy](./media/image14.png)
 Verdrahtungsplan als PDF-Datei: [<span class="underline">Verdrahtungsplan</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=00b731265815145e295780f7aa5bfd6a9&authkey=AXohtFwyMnCPW_U-LHPEFtg&e=c7e03493a6334f078fd5240ffdd81fd4)
 
 > Aktivität: LoPY mit MAX31865 Board verdrahten.
 
 ### Verdrahtung mit Steckplatine
 
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidA9C787C8-49BA-9241-80E2-BF35E27AE088.png](.//media/image15.png)
+![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidA9C787C8-49BA-9241-80E2-BF35E27AE088.png](./media/image15.png)
 
 ## SPI-Bus Interface
 ### Eigenschaften
@@ -156,7 +156,7 @@ siehe auch [**SPI-Bus**](https://de.wikipedia.org/wiki/Serial_Peripheral_Interfa
       - Übertragung: MSB oder LSB zuerst 
   - Unterschiedliche Taktfrequenzen bis in den MHz-Bereich sind zulässig.
   - Vier unterschiedliche Modi CPOL=polarity, CPHA=phase  
-    ![](.//media/image16.png)
+    ![](./media/image16.png)
 
 Viele Einstellungsmöglichkeiten sind unter anderem deshalb erforderlich, weil die Spezifikation für den SPI-Bus in vielen Eigenschaften nicht festgelegt ist, wodurch verschiedene, zueinander inkompatible Geräte existieren. Häufig ist beispielsweise für jedes angeschlossene IC eine eigene Konfiguration des steuernden Mikrocontrollers (Master des SPI-Bus) erforderlich.
 ### LoPy SPI-Bus
@@ -222,32 +222,32 @@ In Atom ist ein GitHub Client integriert. Es können ganz einfach ganze Reposito
 
   1. [<span class="underline">http://github.com/</span>](http://github.com/)
      Search: schilf iot
-     ![](.//media/image17.png)
+     ![](./media/image17.png)
   2. Repository „htlb-atk/schilf-iot-MAX31865“ auswählen
-     ![](.//media/image18.png)
+     ![](./media/image18.png)
   3. Download-Link in die Zwischenablage kopieren
-     ![](.//media/image19.png)
-     ![](.//media/image20.png)
+     ![](./media/image19.png)
+     ![](./media/image20.png)
   4. Zurück zum Atom Editor, mit Strg-Shift-P die Command Palette öffnen und "GitHub: Clone wählen" .
-     ![](.//media/image21.png)
+     ![](./media/image21.png)
   5. Mit Strg-v den Pfad aus der Zwischenablage in das Feld „Clone from“ einsetzen.
-     ![](.//media/image22.png)
+     ![](./media/image22.png)
 
 Damit wird das komplette Repository in das Verzeichnis Z:\\github kopiert und als Projekt in Atom geöffnet. GitHub bietet viele Möglichkeiten zur gemeinsamen Codeentwicklung. In diesem Workshop werden wir jedoch keine weiteren Funktionalitäten von GitHub verwenden.
 
 #### Ordnerstruktur mit Bibliothek auf LoPy übertragen
 Sync oder Upload überträgt das Projekt an den LoPy.
-![](.//media/image23.png)
+![](./media/image23.png)
 
 #### REPL
 
 Sobald der LoPy mit Atom verbunden ist, befindet er sich in einem interaktiven MicroPython Modus, der sogenannten Read-Evaluate-Print-Loop (REPL). Wir können Python Befehle eingeben, diese werden sofort ausgeführt und das Ergebnis des Befehls wird angezeigt. Damit können wir nun die Temperatur des PT100 Sensors auslesen undanzeigen lassen.
-![](.//media/image24.png)
+![](./media/image24.png)
 Wir schreiben nun diese Befehle in die Datei main.py und packen sie in eine Schleife. main.py wird bei jedem Neustart des LoPy automatisch ausgeführt.
 
 1. Neue Datei main.py anlegen
-   ![](.//media/image25.png)
-   ![](.//media/image26.png)
+   ![](./media/image25.png)
+   ![](./media/image26.png)
 2. Programm in main.py eingeben
    ``` python
    # Anzeige PT100 Temperatur
@@ -265,7 +265,7 @@ Wir schreiben nun diese Befehle in die Datei main.py und packen sie in eine Schl
     In Python werden alle Zeilen, die zu einer while-Schleife gehören, gleich weit eingerückt. Leerzeichen am Zeilenanfang dürfen **nicht** beliebig eingefügt werden\! Dies ist ein wesentlicher Unterschied zu anderen Programmiersprachen. Besonders bei verschachtelten Schleifen, If-Abfragen und kopierten Codeblöcken muss auf die Einrückung geachtet werden.
   3. Programm abspeichern\! Sync erkennt sonst keine Änderung und überträgt nichts.
   4. Sync / Upload
-    ![](.//media/image28.png)
+    ![](./media/image28.png)
 
 Das Programm wird mit Sync an den LoPy übertragen und sofort ausgeführt.
 **Unser erstes MicroPython Programm läuft.**
@@ -278,22 +278,22 @@ Im nächsten Schritt müssen wir uns die IoT Plattform ThingSpeak einrichten, da
 Für diesen Workshop verwenden wir ein Gratiskonto von ThingSpeak. ThingSpeak ist die IoT-Plattform der Firma MathWorks, die auch die MATLAB/Simulink Produkte anbietet. MATLAB/Simulink ist an der HTL-Bregenz für alle Lehrer und Schüler lizensiert. Damit uns für die Auswertungen alle MATLAB-Funktionen zur Verfügung stehen, müssen wir uns mit einer **Schul-E-Mail-Adresse** registrieren.
 
 1. [<span class="underline">https://thingspeak.com</span>](https://thingspeak.com)
-   ![Thingspeak-01](.//media/image29.png)
-2. Unbedingt mit der **Schul-E-Mail-Adresse** registrieren. ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid6AD84227-08E3-8447-B3D0-83D184906E8E.png](.//media/image30.png)
-3. An die E-Mail-Adresse wird eine Bestätigungs-Link gesendet (dauert ein paar Sekunden). E-Mail öffnen und "Verify your email" klicken. ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid4A8AE36D-3CFE-784F-9571-4F70E01C5953.png](.//media/image31.png)
+   ![Thingspeak-01](./media/image29.png)
+2. Unbedingt mit der **Schul-E-Mail-Adresse** registrieren. ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid6AD84227-08E3-8447-B3D0-83D184906E8E.png](./media/image30.png)
+3. An die E-Mail-Adresse wird eine Bestätigungs-Link gesendet (dauert ein paar Sekunden). E-Mail öffnen und "Verify your email" klicken. ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid4A8AE36D-3CFE-784F-9571-4F70E01C5953.png](./media/image31.png)
 4. ThingSpeak Webseite öffnen [<span class="underline">https://thingspeak.com</span>](https://thingspeak.com)
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidC13E464C-CD09-7F4F-BFEF-439E695D770B.png](.//media/image32.png)
+   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidC13E464C-CD09-7F4F-BFEF-439E695D770B.png](./media/image32.png)
 5. Schul-E-Mail-Adresse eingeben
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid1E7ECDE6-74A8-0640-9467-D13E0180810F.png](.//media/image33.png)
+   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid1E7ECDE6-74A8-0640-9467-D13E0180810F.png](./media/image33.png)
 6. Das **vorher gewählte** Passwort angeben (Passwort für MathWorks Account) und einloggen.
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid18F773D7-D64C-534E-A51E-B1BCE0E11AFE.png](.//media/image34.png)
+   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid18F773D7-D64C-534E-A51E-B1BCE0E11AFE.png](./media/image34.png)
 
 7. Meldung über die erfolgreiche Registrierung bestätigen.
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid47EC6924-4791-7941-B300-3BE869F4A0DF.png](.//media/image35.png)
+   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid47EC6924-4791-7941-B300-3BE869F4A0DF.png](./media/image35.png)
 8. Den Nutzungsbedingungen zustimmen.
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid3DA73E68-838F-4546-B15B-13D5F28AD1EF.png](.//media/image36.png)
+   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid3DA73E68-838F-4546-B15B-13D5F28AD1EF.png](./media/image36.png)
 9. Damit ist die Registrierung abgeschlossen und ThingSpeak kann verwendet werden.
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidE2E685F4-7F4C-3941-AD37-495A15FE42B4.png](.//media/image37.png)
+   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidE2E685F4-7F4C-3941-AD37-495A15FE42B4.png](./media/image37.png)
 
 Das Konto ist nun angelegt und wir können eigene **Channels** anlegen.
 
@@ -306,21 +306,21 @@ abgespeichert werden.
 In ThingSpeak werden die Werte in sogenannten "Channels" organisiert. Man kann sich einen Channel wie eine Tabelle mit (fast) beliebig vielen Zeilen und maximal acht Datenspalten (Feldern) vorstellen. Immer wenn über das Internet neue Werte an den Channel gesendet werden, wird eine neue Zeile erstellt. Zusätzlich zu den Datenspalten wird noch ein Zeitstempel (created\_at) generiert und eine laufende Nummer (entry\_id) vergeben.
 
 Beispiel für eine Tabelle mit einem Datenfeld:
-![channeldata](.//media/image38.png)
+![channeldata](./media/image38.png)
 
 ### Neuen Channel erstellen
 In unserem Beispiel sollen die gemessenen Temperaturwerte in einem Channel erfasst werden. Wir erstellen dafür einen Channel "motor\_1" mit einem Datenfeld für die Umgebungstemperatur "Tu".
 
 1. Anmelden auf [<span class="underline">https://thingspeak.com</span>](https://thingspeak.com) und "Channels --\> My Channels" auswählen
-   ![ ThingSpeakTM Channels Y My Channels New Channel Apps Community](.//media/image39.png)
+   ![ ThingSpeakTM Channels Y My Channels New Channel Apps Community](./media/image39.png)
 
 2. Channel Name: **motor\_1**, Field1: **Tu**
-   ![ ThingSpeakTM New Channel Apps Community Support Help How to Buy Account](.//media/image40.png)
+   ![ ThingSpeakTM New Channel Apps Community Support Help How to Buy Account](./media/image40.png)
 3. Nach unten scrollen und "Save Channel"
-   ![ ThingSpeakTM Apps Community Support How to Buy Account Sign Out](.//media/image41.png)
+   ![ ThingSpeakTM Apps Community Support How to Buy Account Sign Out](./media/image41.png)
 
 4. Damit steht ein neuer Channel "motor\_1" bereit. Ein leeres Diagramm wird automatisch erstellt und kann später angepasst werden. Wichtig ist die Channel ID, sie wird später noch benötigt.
-   ![Channel ID: 381619](.//media/image42.png)
+   ![Channel ID: 381619](./media/image42.png)
 
 ## ThingSpeak API
 
@@ -348,10 +348,10 @@ Der Client, in unserem Fall der LoPy, muss sich gegenüber ThingSpeak authentifi
 ThingSpeak erstellt für jeden Channel automatisch zwei Schlüssel: Einen **Write API Key** und eine **Read API Key**.
 
 1. Die Schlüssel finden wir unter Channels --\> My Channels
-   ![hingSpeakTM My Channel New Channel Name motor\_l Channels Apps My Channels Wa](.//media/image43.png)
+   ![hingSpeakTM My Channel New Channel Name motor\_l Channels Apps My Channels Wa](./media/image43.png)
 2. Channel *motor\_1* auswählen; *API Keys* auswählen
-   ![Channel ID: 381619 Messwerte Motor](.//media/image44.png)
-   ![Requests Update a ChannelFeed GET https://api ](.//media/image45.png)
+   ![Channel ID: 381619 Messwerte Motor](./media/image44.png)
+   ![Requests Update a ChannelFeed GET https://api ](./media/image45.png)
 
 ##### Write API Key
 
@@ -380,7 +380,7 @@ Wir können das Feld "Update a Channel Feed" kopieren, anpassen und im Browser (
 4. In unserem Channel sehen wir nun den ersten Datenpunkt.
    [https://thingspeak.com/channels/**381619**/private_show](https://thingspeak.com/channels/381619/private_show)
    Channel ID **381619** durch die **eigene Channel ID** ersetzen\!
-   ![show channel](.//media/image46.png)
+   ![show channel](./media/image46.png)
 
 **Achtung:** Mit einem kostenlosen ThingSpeak Konto kann höchstens alle 15s ein Update an den Channel gesendet werden. Bezahlte Konten dürfen einmal pro Sekunde updaten.
 
@@ -400,7 +400,7 @@ Eine genaue Beschreibung der Parameter steht in der ThingSpeak Dokumentation
 API Aufrufe mit vielen Parametern können sehr komplex werden. POST, PUT und DELETE Requests können nicht einfach mit einem Webbrowser gesendet werden.
 
 Für das Austesten von REST API Aufrufen ist das Programm **Postman** sehr hilfreich.
-![Postman](.//media/image47.png)
+![Postman](./media/image47.png)
 
 Über eine grafische Oberfläche können API Aufrufe erstellt, abgespeichert und gesendet werden. Antworten des Servers werden im unteren Bereich angezeigt. Mit Postman sieht man sehr genau, was tatsächlich an den Server (Parameter, Header, Body, ...) gesendet wird.
 
@@ -412,17 +412,17 @@ Auch für die Fehlersuche ist das Programm Postman sehr empfehlenswert.
 Für die Fehlersuche ist es oft nützlich zu sehen, was beim Server überhaupt ankommt. Diese Frage kann RequestBin beantworten.
 [<span class="underline">https://requestb.in</span>](https://requestb.in)
 
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid1E6F0465-F4DD-6742-9F7C-961ECD2894D6.png](.//media/image48.png)
+![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid1E6F0465-F4DD-6742-9F7C-961ECD2894D6.png](./media/image48.png)
 
 „Create a RequestBin“ liefert eine URL zurück, an die beliebige http-Aufrufe gesendet werden können.
 
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid72FCCCC2-E12E-2F40-AC24-11BFB6467FB6.png](.//media/image49.png)
+![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid72FCCCC2-E12E-2F40-AC24-11BFB6467FB6.png](./media/image49.png)
 
 **Beispiel:** Der Aufruf
 [<span class="underline">https://requestb.in/uii7yqui?api\_key=UPTTFJC3VV33GQ\&field1=19.0</span>](https://requestb.in/uii7yqui?api_key=UPTTFJC3VV33GQ&field1=19.0)
 liefert
 
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidA65591AC-0015-2E42-8D1C-72BD6A874CAE.png](.//media/image50.png)
+![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidA65591AC-0015-2E42-8D1C-72BD6A874CAE.png](./media/image50.png)
 
 Die vom Server empfangenen Parameter und Header werden detailliert aufgelistet. Nach spätesten 48h wird die URL automatisch gelöscht.
 
@@ -443,7 +443,7 @@ Eine gute Einführung in das Thema MQTT liefert
 MQTT funktioniert nach dem Publish/Subscribe-Verfahren. Die Datenproduzenten und -nutzer verbinden sich zu einem zentralen Server (MQTT-Broker). Das Senden (publish) und Empfangen (subscribe) von Nachrichten funktioniert über sogenannte Topics.
 
 Eine mobile App kann sich nun ebenfalls zum Broker verbinden und den gleichen Topic abonnieren (subscribe), um alle Nachrichten zu erhalten, die der Temperatursensor versendet. Die komplette Kommunikation funktioniert rein über Topics, und der Sensor und das Mobiltelefon wissen nichts über die Existenz des jeweils anderen.
-![QTT Publish_Subscribe](.//media/image51.png)
+![QTT Publish_Subscribe](./media/image51.png)
 
 ##### Mechanismen zur Qualitätskontrolle
 
@@ -476,7 +476,7 @@ zu finden. Wir beschränken uns auf [<span class="underline">Publish to a Channe
 ##### Broker
 
 Der ThingSpeak MQTT Broker ist unter der URL `mqtt.thingspeak.com` erreichbar. Der Port hängt vom Verbindungstyp ab.
-![Thingspeak Broker Ports](.//media/image52.png)
+![Thingspeak Broker Ports](./media/image52.png)
 
 ##### Topic
 
@@ -484,8 +484,8 @@ Jedes Feld in einem Channel ist ein eigenes Topic auf das geschrieben (published
 Das Topic ist folgendermaßen aufgebaut:
 `channels/channelID/publish/fields/field/<fieldnumber>/<apikey>`
 **Beispiel:**
-![Thingspeak Topic](.//media/image53.png)
-![Thingspeak WriteAPI Key](.//media/image54.png)
+![Thingspeak Topic](./media/image53.png)
+![Thingspeak WriteAPI Key](./media/image54.png)
 
 Ein neuer Temperaturwert muss also auf das Topic
 `channels/**381619**/publish/fields/**field1**/UPTTFJC3VVxxxxxx`
@@ -494,8 +494,8 @@ publiziert werden.
 ##### Publish testen
 
 Die Authentifizierung des Clients erfolgt auch hier wieder über API Keys. Für den Verbindungsaufbau muss einmalig zuerst ein MQTT API Key generiert werden.
-![ MQTT-API-Key](.//media/image55.png)
-![MQTT API Key](.//media/image56.png)
+![ MQTT-API-Key](./media/image55.png)
+![MQTT API Key](./media/image56.png)
 
 Wir können nun mit einem Online MQTT Client einen Temperaturwert an unseren ThingSpeak Channel senden. Dieser Test empfiehlt sich, bevor wir mit unserem eigenen Programm vom LoPy aus publizieren.
 
@@ -503,15 +503,15 @@ Einen freien MQTT Client gibt es unter:
 [<span class="underline">http://www.hivemq.com/demos/websocket-client/</span>](http://www.hivemq.com/demos/websocket-client/).
 
 1. Für den Verbindungsaufbau wird der **MQTT API Key** benötigt.
-   ![hivemqtt websocket client](.//media/image57.png)
+   ![hivemqtt websocket client](./media/image57.png)
 2. Wir publizieren nun einen neuen Temperaturwert 21.0 auf das Topic
   `channels/381619/publish/fields/field1/UPTTFJC3VVxxxxxx`
    Bitte die eigene `Channel Id` und eigenen `Write API Key` verwenden.
-  ![Publish](.//media/image58.png)
+  ![Publish](./media/image58.png)
 3. Der neue Wert wird sofort in unserem Channel angezeigt:
-   ![Channel View](.//media/image59.png)
+   ![Channel View](./media/image59.png)
 4. Die Verbindung können wir nun wieder trennen.
-   ![HIVEMQ Disconnect](.//media/image60.png)
+   ![HIVEMQ Disconnect](./media/image60.png)
 
 > Publish ist damit erfolgreich getestet. Wir wissen nun, dass das Topic richtig ist und der API Key für den Verbindungsaufbau stimmt.
 
@@ -631,16 +631,16 @@ Mit einem neuen Channel:
 ### Neuen Channel „motor\_1\_calc“ anlegen
 
 Den Channel „motor\_1\_calc“ wie bereits unter "Neuen Channel erstellen" beschrieben erstellen.
-![](.//media/image66.png)
+![](./media/image66.png)
 
 ### MATLAB Analysis
 
 Wir erstellen nun ein MATLAB Skript für die Berechnung der
 Temperaturänderung.
 1. MATLAB Analysis anlegen
-![](.//media/image67.PNG)
+![](./media/image67.PNG)
 2. Name „Delta\_Tu“
-![](.//media/image68.png)
+![](./media/image68.png)
 3. MATLAB Code eingeben
 ```matlab
 % gelesen. Die Änderung wird berechnet und in das Feld 1 channel motor_1_calc geschrieben
@@ -678,7 +678,7 @@ Die **React-App** kann auf verschieden Ereignisse reagieren. Wir legen uns eine 
 
 On Data Insertation Action: Das vorher erstellte MATLAB Skript
 *Delta\_Tu* ausführen.
-![](.//media/image70.png)
+![](./media/image70.png)
 
 ### Reaktion auf große Temperaturänderung
 
@@ -695,40 +695,40 @@ verbindet, E-Mail versenden ist eine von sehr vielen möglichen Aktionen.
 ## IFTTT Konto anlegen
 
 1. [<span class="underline">https://ifttt.com/</span>](https://ifttt.com/)
-  ![](.//media/image71.png)
+  ![](./media/image71.png)
 2. Konto anlegen: Sign up
-  ![](.//media/image72.png)
+  ![](./media/image72.png)
 3. Anmeldedaten eingeben
-  ![IFTTT Anmeldedaten](.//media/image73.png)
+  ![IFTTT Anmeldedaten](./media/image73.png)
 
 ## IFTTT Applet erstellen
 
 1. Ein neues Applet erstellen
-![](.//media/image74.png)
+![](./media/image74.png)
 2. Bedingung die erfüllt sein muss, damit die Aktion ausgeführt wird
-![](.//media/image75.png)
+![](./media/image75.png)
 3. Webhook-Service auswählen
-![](.//media/image76.png)
+![](./media/image76.png)
 4. Webhook konfigurieren
-![](.//media/image77.png) ![](.//media/image78.png)
+![](./media/image77.png) ![](./media/image78.png)
 5. Einen Namen für Trigger-Ereignis wählen z. B. *Motor1TuRisingFast*   
-![](.//media/image79.png)
+![](./media/image79.png)
 6. Aktion definieren
-![](.//media/image80.png)
+![](./media/image80.png)
 7. Aus einer Vielzahl von Aktionen auswählen. Wir wählen E-Mail.
-![](.//media/image81.png) ![](.//media/image82.png)
+![](./media/image81.png) ![](./media/image82.png)
 8. E-Mail Inhalt festlegen: „Warnung: Schneller Temperaturanstieg im Motor 1“   
-![](.//media/image83.png) ![](.//media/image84.png) ![](.//media/image85.png)
+![](./media/image83.png) ![](./media/image84.png) ![](./media/image85.png)
 
 ## IFTTT mit ThingSpeak verbinden
 Wie können wir nun das Trigger-Ereignis *Motor1TuRisingFast* von ThingSpeak aus mit ThingHTTP an IFTTT senden? Die IFTTT Webhooks Dokumentation hilft uns weiter.
 ### Webhooks Dokumentation
 1. Services auswählen
-![](.//media/image86.png)
+![](./media/image86.png)
 2. Dokumentation öffnen
-![](.//media/image87.png)
+![](./media/image87.png)
 3. API-Key und https request nachschauen
-![](.//media/image88.png)
+![](./media/image88.png)
 `{event}`muss durch den gewünschten Trigger-Event (hier: *Motor1TuRisingFast*) ersetzt werden:
 `https://maker.ifttt.com/trigger/Motor1TuRisingFast/with/key/pXXuT_od2Ifxxxxxxxxxxxx`    
 `pXXuT_od2Ifxxxxxxxxxxxx...` ist der API-Key und ist für jeden IFTTT Benutzer unterschiedlich.
@@ -738,11 +738,11 @@ Wie können wir nun das Trigger-Ereignis *Motor1TuRisingFast* von ThingSpeak aus
 ### ThingHTTP Request erstellen
 Das Format für den Web-Request ist jetzt bekannt und wir können in
 ThingSpeak die ThingHTTP App konfigurieren.
-![](.//media/image89.png)
+![](./media/image89.png)
 
 ### React erstellen
 Immer wenn die Temperaturerhöhung zwischen aufeinanderfolgenden Werten
 größer als 20°C ist, soll ThingHTTP einen Web-Request an IFTTT senden,
 IFTTT sendet dann eine E-Mail.
-![](.//media/image90.png)
-![](.//media/image93.png)
+![](./media/image90.png)
+![](./media/image93.png)
