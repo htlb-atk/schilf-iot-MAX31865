@@ -45,7 +45,7 @@ Der Workshop gliedert sich in folgende Teilaufgaben:
 
 ## Übersicht Datenfluss und Kommunikation
 
-![](.//media/image4.jpeg)
+![](.//media/image4.png)
 
 # Das „Ding“: LoPy
 
@@ -109,7 +109,7 @@ speziellen Plug-In für die Kommunikation mit dem LoPy.
     ![](.//media/image11.png)
     Unter Settings Global Settings Device Address wird die höchste COM
     eingetragen (Strg-v).
-    ![](.//media/image12.PNG)
+    ![](.//media/image12.png)
 
 # Temperaturmessung
 
@@ -222,31 +222,31 @@ In Atom ist ein GitHub Client integriert. Es können ganz einfach ganze Reposito
 
   1. [<span class="underline">http://github.com/</span>](http://github.com/)
      Search: schilf iot
-     ![](.//media/image17.tiff)
+     ![](.//media/image17.png)
   2. Repository „htlb-atk/schilf-iot-MAX31865“ auswählen
-     ![](.//media/image18.tiff)
+     ![](.//media/image18.png)
   3. Download-Link in die Zwischenablage kopieren
-     ![](.//media/image19.tiff)
-     ![](.//media/image20.tiff)
+     ![](.//media/image19.png)
+     ![](.//media/image20.png)
   4. Zurück zum Atom Editor, mit Strg-Shift-P die Command Palette öffnen und "GitHub: Clone wählen" .
-     ![](.//media/image21.tiff)
+     ![](.//media/image21.png)
   5. Mit Strg-v den Pfad aus der Zwischenablage in das Feld „Clone from“ einsetzen.
-     ![](.//media/image22.tiff)
+     ![](.//media/image22.png)
 
 Damit wird das komplette Repository in das Verzeichnis Z:\\github kopiert und als Projekt in Atom geöffnet. GitHub bietet viele Möglichkeiten zur gemeinsamen Codeentwicklung. In diesem Workshop werden wir jedoch keine weiteren Funktionalitäten von GitHub verwenden.
 
 #### Ordnerstruktur mit Bibliothek auf LoPy übertragen
 Sync oder Upload überträgt das Projekt an den LoPy.
-![](.//media/image23.tiff)
+![](.//media/image23.png)
 
 #### REPL
 
 Sobald der LoPy mit Atom verbunden ist, befindet er sich in einem interaktiven MicroPython Modus, der sogenannten Read-Evaluate-Print-Loop (REPL). Wir können Python Befehle eingeben, diese werden sofort ausgeführt und das Ergebnis des Befehls wird angezeigt. Damit können wir nun die Temperatur des PT100 Sensors auslesen undanzeigen lassen.
-![](.//media/image24.tiff)
+![](.//media/image24.png)
 Wir schreiben nun diese Befehle in die Datei main.py und packen sie in eine Schleife. main.py wird bei jedem Neustart des LoPy automatisch ausgeführt.
 
 1. Neue Datei main.py anlegen
-   ![](.//media/image25.tiff)
+   ![](.//media/image25.png)
    ![](.//media/image26.png)
 2. Programm in main.py eingeben
    ``` python
@@ -265,7 +265,7 @@ Wir schreiben nun diese Befehle in die Datei main.py und packen sie in eine Schl
     In Python werden alle Zeilen, die zu einer while-Schleife gehören, gleich weit eingerückt. Leerzeichen am Zeilenanfang dürfen **nicht** beliebig eingefügt werden\! Dies ist ein wesentlicher Unterschied zu anderen Programmiersprachen. Besonders bei verschachtelten Schleifen, If-Abfragen und kopierten Codeblöcken muss auf die Einrückung geachtet werden.
   3. Programm abspeichern\! Sync erkennt sonst keine Änderung und überträgt nichts.
   4. Sync / Upload
-    ![](.//media/image28.tiff)
+    ![](.//media/image28.png)
 
 Das Programm wird mit Sync an den LoPy übertragen und sofort ausgeführt.
 **Unser erstes MicroPython Programm läuft.**
@@ -306,8 +306,7 @@ abgespeichert werden.
 In ThingSpeak werden die Werte in sogenannten "Channels" organisiert. Man kann sich einen Channel wie eine Tabelle mit (fast) beliebig vielen Zeilen und maximal acht Datenspalten (Feldern) vorstellen. Immer wenn über das Internet neue Werte an den Channel gesendet werden, wird eine neue Zeile erstellt. Zusätzlich zu den Datenspalten wird noch ein Zeitstempel (created\_at) generiert und eine laufende Nummer (entry\_id) vergeben.
 
 Beispiel für eine Tabelle mit einem Datenfeld:
-![reated 2017-12-09 2017-12-09 2017-12-09 2017-12-09 2017-12-09
-2017-12-09 2017-12-09 at , en](.//media/image38.png)
+![channeldata](.//media/image38.png)
 
 ### Neuen Channel erstellen
 In unserem Beispiel sollen die gemessenen Temperaturwerte in einem Channel erfasst werden. Wir erstellen dafür einen Channel "motor\_1" mit einem Datenfeld für die Umgebungstemperatur "Tu".
