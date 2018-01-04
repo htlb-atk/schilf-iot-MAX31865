@@ -1,7 +1,7 @@
 ---
-layout: page
 title: SchiLF IoT HTLB
 ---
+
 # Übersicht
 
 In diesem Workshop erstellen wir gemeinsam eine einfache IoT Anwendung.
