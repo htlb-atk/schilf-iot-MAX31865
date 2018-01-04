@@ -104,7 +104,7 @@ speziellen Plug-In für die Kommunikation mit dem LoPy.
     Failed to connect:  
     Eventuell muss zuerst noch die richtige Schnittstelle eingestellt
     werden.  
-    Mit MoreGet Serial Ports werden alle erkannten Schnittstellen
+    Mit More --\>Get Serial Ports werden alle erkannten Schnittstellen
     angezeigt.  
     ![](./media/image11.png)
     Unter Settings Global Settings Device Address wird die höchste COM
