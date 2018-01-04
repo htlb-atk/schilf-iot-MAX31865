@@ -14,7 +14,7 @@ zu groß ist, wird eine E-Mail Nachricht auf das Handy gesendet.
 
 ## Komponenten einer IoT Anwendung
 
-![]image2.png)
+![](./media/image2.png)
 
 Mindmap IoT als PDF-Datei: [<span class="underline">IoT.pdf</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=0f2758075762c4ff18f91d79d206468d7&authkey=AVAY-_c2--MxgPPGsrOa8bg&e=946d00393fd5464b8f9d54a7a739512b)
 
