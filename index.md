@@ -638,7 +638,7 @@ Den Channel „motor\_1\_calc“ wie bereits unter "Neuen Channel erstellen" bes
 Wir erstellen nun ein MATLAB Skript für die Berechnung der
 Temperaturänderung.
 1. MATLAB Analysis anlegen
-![](./media/image67.PNG)
+![](./media/image67.png)
 2. Name „Delta\_Tu“
 ![](./media/image68.png)
 3. MATLAB Code eingeben
