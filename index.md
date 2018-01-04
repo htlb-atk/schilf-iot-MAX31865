@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SchiLF IoT
+title: SchiLF IoT HTLB
 ---
 # Übersicht
 
