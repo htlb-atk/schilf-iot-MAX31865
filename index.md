@@ -1,36 +1,28 @@
 ---
-title: SchiLF IoT HTLB
+title: IoT Workshop HTLB
+author: Kurt ALbrecht
 ---
 
 # Übersicht
 
 In diesem Workshop erstellen wir gemeinsam eine einfache IoT Anwendung.
 
-Wir messen mit einem Sensor die Temperatur einer Maschine, verbinden den
-Sensor über SPI -Bus mit einem IoT-Controller (LoPy) und übertragen die
-Messwerte zur ThingSpeak Plattform in die Cloud. Dort stellen wir die
-Messwerte graphisch dar und analysieren sie. Wenn der Temperaturgradient
-zu groß ist, wird eine E-Mail Nachricht auf das Handy gesendet.
+Wir messen mit einem Sensor die Temperatur einer Maschine, verbinden den Sensor über SPI -Bus mit einem IoT-Controller (LoPy) und übertragen die Messwerte zur ThingSpeak Plattform in die Cloud. Dort stellen wir die Messwerte graphisch dar und analysieren sie. Wenn der Temperaturgradient zu groß ist, wird eine E-Mail Nachricht auf das Handy gesendet.
 
 ## Komponenten einer IoT Anwendung
 
 ![](./media/image2.png)
 
-Mindmap IoT als PDF-Datei: [<span class="underline">IoT.pdf</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=0f2758075762c4ff18f91d79d206468d7&authkey=AVAY-_c2--MxgPPGsrOa8bg&e=946d00393fd5464b8f9d54a7a739512b)
+Mindmap IoT als PDF-Datei: [<span class="underline">IoT.pdf</span>](./media/IoT.pdf)
 
 Aus den vielen Möglichkeiten wählen wir für diesen Workshop von jeder
 Kategorie eine aus.
 
-Als Thing verwenden wir einen LoPy-Mikrocontroller, der über ein
-SPI-Interface einen PT100 Temperatursensor ausliest. Den Netzwerkzugang
-realisieren wir über WLAN. Die ThingSpeak Plattform stellt uns den Cloud
-Service bereit. Die Temperaturwerte analysieren wir mit Hilfe von
-MATLAB. Die Visualisierung erfolgt auf einem Dashboard. Mit IFTTT (If
-This Than That) realisieren wir eine Reaktion auf die Auswertung.
+Als Thing verwenden wir einen LoPy-Mikrocontroller, der über ein SPI-Interface einen PT100 Temperatursensor ausliest. Den Netzwerkzugang realisieren wir über WLAN. Die ThingSpeak Plattform stellt uns den Cloud Service bereit. Die Temperaturwerte analysieren wir mit Hilfe von MATLAB. Die Visualisierung erfolgt auf einem Dashboard. Mit IFTTT (If This Than That) realisieren wir eine Reaktion auf die Auswertung.
 
 ![](./media/image3.png)
 
-Mindmap als PDF-Datei: [<span class="underline">IoT\_Workshop.pdf</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=03fac0ee75c234667905f7408bf1c6b60&authkey=AeHiCcWbcm5gJ38ofemFalY&e=e57406c916094c6386dba333a0de2931)
+Mindmap als PDF-Datei: [<span class="underline">IoT\_Workshop.pdf</span>](./media/IoT\ Fasttrack.pdf)
 
 Der Workshop gliedert sich in folgende Teilaufgaben:
 
@@ -51,11 +43,7 @@ Der Workshop gliedert sich in folgende Teilaufgaben:
 
 ## LoPy Developement Boards
 
-Der LoPy ist ein Mikrocontroller Board auf Basis des Espressif ESP32
-chipset. Er unterstützt die drahtlosen Technologien WLAN, Bluetooth Low
-Energy (BLE) und LoRa. Andere Vertreter dieser Produktfamilie
-unterstützen weitere Kommunikationsstandards wie z. B. Sigfox oder
-LTE-M.  
+Der LoPy ist ein Mikrocontroller Board auf Basis des Espressif ESP32 chipset. Er unterstützt die drahtlosen Technologien WLAN, Bluetooth Low Energy (BLE) und LoRa. Andere Vertreter dieser Produktfamilie unterstützen weitere Kommunikationsstandards wie z. B. Sigfox oder LTE-M.  
 Der Stromverbrauch im Deep-sleep beträgt nur ca. 25µA.
 
 Ein eingebauter MicroPython Interpreter ermöglicht eine einfache
@@ -69,8 +57,7 @@ Für Eigenentwicklungen sind auch OEM Boards erhältlich.
 
 ## Expansion Board
 
-![](./media/image7.png)Die Hard- und Softwareentwicklung wird durch das
-Expansion Board erleichtert:
+![](./media/image7.png)Die Hard- und Softwareentwicklung wird durch das Expansion Board erleichtert:
 
   - LoPy Anschlüsse auf Pfosten geführt,
   - USB-Anschluss für Anschluss an einen PC,
@@ -82,59 +69,47 @@ Expansion Board erleichtert:
 
 ## Atom Editor mit pymakr plug-in
 
-Der LoPy hat bereits einen MicroPython Interpreter eingebaut, es wird
-daher keine Compiler-Umgebung benötigt.
-Für die Programmierung verwenden wir den Atom-Editor mit einen
-speziellen Plug-In für die Kommunikation mit dem LoPy.
+Der LoPy hat bereits einen MicroPython Interpreter eingebaut, es wird daher keine Compiler-Umgebung benötigt. Für die Programmierung verwenden wir den Atom-Editor mit einem speziellen Plug-In für die Kommunikation mit dem LoPy.
 
 > Aktivität: Verbindung zum LoPy herstellen.
 
   1. Atom Editor starten ![](./media/image9.png)
-  2. Für die Screenshots wurde das Thema von „Atom Dark“ auf „Atom Light“
-    umgestellt.  
+  2. Für die Screenshots wurde das Thema von „Atom Dark“ auf „Atom Light“ umgestellt.  
     File --> Settings --> Themes
     ![](./media/image10.png)
-  3. Der LoPy wird an eine USB-Schnittstelle angeschlossen und von dort
-    auch mit Energie versorgt. Auf dem PC erscheint die Verbindung als
-    zusätzliche COM-Schnittstelle.
-  4. \>\>\> zeigt eine erfolgreiche Verbindung mit dem LoPy an. Am oberen
-    Rand des Fensters wird „Connected“ angezeigt. Einige Male die
-    Enter-Taste drücken: Jedesmal muss ein neuer Prompt (\>\>\>)
-    angezeigt werden.  
+  3. Der LoPy wird an eine USB-Schnittstelle angeschlossen und von dort auch mit Energie versorgt. Auf dem PC erscheint die Verbindung als zusätzliche COM-Schnittstelle.
+  4. \>\>\> zeigt eine erfolgreiche Verbindung mit dem LoPy an. Am oberen Rand des Fensters wird „Connected“ angezeigt. Einige Male die Enter-Taste drücken: Jedesmal muss ein neuer Prompt (\>\>\>)angezeigt werden.   
     Failed to connect:  
-    Eventuell muss zuerst noch die richtige Schnittstelle eingestellt
-    werden.  
-    Mit More --\>Get Serial Ports werden alle erkannten Schnittstellen
-    angezeigt.  
+    Eventuell muss zuerst noch die richtige Schnittstelle eingestellt werden.  
+    Mit More --\>Get Serial Ports werden alle erkannten Schnittstellen angezeigt.  
     ![](./media/image11.png)
-    Unter Settings Global Settings Device Address wird die höchste COM
-    eingetragen (Strg-v).
+    Unter Settings Global Settings Device Address wird die höchste COM eingetragen (Strg-v).
     ![](./media/image12.png)
 
 # Temperaturmessung
 
 ## Adafruit Interface Board
 
-Die integrierte Schaltung MAX31865.pdf wandelt ein Widerstandsverhältnis
-in einen 15bit Digitalwert. Die Schaltung ist besonders für die
-Auswertung von PT100 und PT1000 Elementen geeignet. Die Kommunikation
-mit dem LoPy erfolgt über das SPI-Bus Interface.  
+Die integrierte Schaltung MAX31865.pdf wandelt ein Widerstandsverhältnis in einen 15bit Digitalwert. Die Schaltung ist besonders für die Auswertung von PT100 und PT1000 Elementen geeignet. Die Kommunikation mit dem LoPy erfolgt über das SPI-Bus Interface.  
 [<span class="underline">Datenblatt MAX31865</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=0092d8dc759404bde9f372b9aacc891cd&authkey=AdsadokQa5XxAF3X3ueB76w&e=941dfe278d4441e68b2792e1083d88ac).  
-Wir verwenden das Interface Board "Adafruit PT100 RTD Temperature Sensor Amplifier - MAX31865". Das Board ist unter anderem mit einem MAX31865 und einem Referenzwiderstand mit 430Ω bestückt.
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid611F64C4-7D34-D44A-8CAF-DEB09F05A9BE.png](./media/image13.png)
-Datenblatt: [<span class="underline">adafruit-max31865-rtd-pt100-amplifier.pdf</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=014df33fd28e341c08a08d9b782fb8956&authkey=AY4nZZwKZd7xComsOIjaQv4&e=0a0445e276ea49a48095c602c153ad66)
+Wir verwenden das Interface Board "Adafruit PT100 RTD Temperature Sensor Amplifier - MAX31865". Das Board ist unter anderem mit einem MAX31865 und einem Referenzwiderstand mit 430Ω bestückt.      
+![Adafruit MAX31865 Interface Board](./media/image13.png)
+Datenblatt: [<span class="underline">adafruit-max31865-rtd-pt100-amplifier.pdf</span>](.\media\adafruit-max31865-rtd-pt100-amplifier.pdf)
 ### Verdrahtung LoPy - MAX31865 Interface Board
+
 ![Verdrahtung LoPy](./media/image14.png)
-Verdrahtungsplan als PDF-Datei: [<span class="underline">Verdrahtungsplan</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=00b731265815145e295780f7aa5bfd6a9&authkey=AXohtFwyMnCPW_U-LHPEFtg&e=c7e03493a6334f078fd5240ffdd81fd4)
+Verdrahtungsplan als PDF-Datei: [<span class="underline">Verdrahtungsplan</span>](./media/Verdrahtung\ LoPy\ MAX31865.pdf)
 
 > Aktivität: LoPY mit MAX31865 Board verdrahten.
 
 ### Verdrahtung mit Steckplatine
 
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidA9C787C8-49BA-9241-80E2-BF35E27AE088.png](./media/image15.png)
+![Verdrahtung-Steckplatine](./media/image15.png)
 
 ## SPI-Bus Interface
+
 ### Eigenschaften
+
 siehe auch [**SPI-Bus**](https://de.wikipedia.org/wiki/Serial_Peripheral_Interface)
 
   - Drei gemeinsame Leitungen, an denen jeder Teilnehmer angeschlossen ist.
@@ -169,11 +144,7 @@ Die gesamte Kommunikation mit dem MAX31865 ist in einer Klasse
 
 ### Anwendung der Klasse lopy\_max31865
 
-Die Klasse „lopy\_max31865.py“ stellt die Verbindung zum Interface-Board
-her. Dort wird die ganze Kommunikation mit dem IC MAC31865 abgewickelt.
-Auch die Umrechnung der 15bit-Zahl in eine Temperatur in °C erfolgt in
-dieser Klasse. Der Anwender kann mit der Methode „read()“ die Temperatur
-auslesen.
+Die Klasse „lopy\_max31865.py“ stellt die Verbindung zum Interface-Board her. Dort wird die ganze Kommunikation mit dem IC MAC31865 abgewickelt. Auch die Umrechnung der 15bit-Zahl in eine Temperatur in °C erfolgt in dieser Klasse. Der Anwender kann mit der Methode „read()“ die Temperatur auslesen.
 
 ```python
    # Die Klasse lopy_max31865 in das eigene Programm importieren  
@@ -188,9 +159,7 @@ auslesen.
 
 ### Klasse lopy\_max31865
 
-Die Klasse „lopy\_max31865.py“ wickelt die Kommunikation mit dem
-MAX31865 über den SPI Bus ab, und stellt dem Anwenderprogramm Funktionen
-zum Auslesen der Temperatur bereit. Zu diesem Zweck verwendet sie nur
+Die Klasse „lopy\_max31865.py“ wickelt die Kommunikation mit dem MAX31865 über den SPI Bus ab, und stellt dem Anwenderprogramm Funktionen zum Auslesen der Temperatur bereit. Zu diesem Zweck verwendet sie nur
 drei SPI-Funktionen:
 
 ``` python
@@ -204,13 +173,12 @@ drei SPI-Funktionen:
    buf=spi.read(n)
 ```
 
-Der MicroPython Programmcode für die Klasse „lopy\_max31865“ steht
-unter:  
+Der MicroPython Programmcode für die Klasse „lopy\_max31865“ steht unter:  
 [<span class="underline">https://github.com/htlb-atk/schilf-iot-MAX31865/blob/master/lib/lopy\_max31865.py</span>](https://github.com/htlb-atk/schilf-iot-MAX31865/blob/master/lib/lopy_max31865.py)
 
 Für andere Bausteine mit SPI-Schnittstelle kann diese Klasse als Ausgangbasis dienen.
 
-> Aktivität: Temperaturwerte auslesen
+## Temperaturwerte auslesen
 
 ### Bibliothek „lopy\_max31865“ auf den LoPy übertragen.
 
@@ -239,10 +207,12 @@ Damit wird das komplette Repository in das Verzeichnis Z:\\github kopiert und al
 Sync oder Upload überträgt das Projekt an den LoPy.
 ![](./media/image23.png)
 
-#### REPL
+### REPL
 
-Sobald der LoPy mit Atom verbunden ist, befindet er sich in einem interaktiven MicroPython Modus, der sogenannten Read-Evaluate-Print-Loop (REPL). Wir können Python Befehle eingeben, diese werden sofort ausgeführt und das Ergebnis des Befehls wird angezeigt. Damit können wir nun die Temperatur des PT100 Sensors auslesen undanzeigen lassen.
+Sobald der LoPy mit Atom verbunden ist, befindet er sich in einem interaktiven MicroPython Modus, der sogenannten Read-Evaluate-Print-Loop (REPL). Wir können Python Befehle eingeben, diese werden sofort ausgeführt und das Ergebnis des Befehls wird angezeigt. Damit können wir nun die Temperatur des PT100 Sensors auslesen und anzeigen lassen.
 ![](./media/image24.png)
+
+### Python Programm
 Wir schreiben nun diese Befehle in die Datei main.py und packen sie in eine Schleife. main.py wird bei jedem Neustart des LoPy automatisch ausgeführt.
 
 1. Neue Datei main.py anlegen
@@ -279,21 +249,20 @@ Für diesen Workshop verwenden wir ein Gratiskonto von ThingSpeak. ThingSpeak is
 
 1. [<span class="underline">https://thingspeak.com</span>](https://thingspeak.com)
    ![Thingspeak-01](./media/image29.png)
-2. Unbedingt mit der **Schul-E-Mail-Adresse** registrieren. ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid6AD84227-08E3-8447-B3D0-83D184906E8E.png](./media/image30.png)
-3. An die E-Mail-Adresse wird eine Bestätigungs-Link gesendet (dauert ein paar Sekunden). E-Mail öffnen und "Verify your email" klicken. ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid4A8AE36D-3CFE-784F-9571-4F70E01C5953.png](./media/image31.png)
+2. Unbedingt mit der **Schul-E-Mail-Adresse** registrieren. ![Thingspeak Sign Up](./media/image30.png)
+3. An die E-Mail-Adresse wird eine Bestätigungs-Link gesendet (dauert ein paar Sekunden). E-Mail öffnen und "Verify your email" klicken. ![Tingspeak Verify E-Mail](./media/image31.png)
 4. ThingSpeak Webseite öffnen [<span class="underline">https://thingspeak.com</span>](https://thingspeak.com)
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidC13E464C-CD09-7F4F-BFEF-439E695D770B.png](./media/image32.png)
+   ![ThingSpeak Sign In](./media/image32.png)
 5. Schul-E-Mail-Adresse eingeben
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid1E7ECDE6-74A8-0640-9467-D13E0180810F.png](./media/image33.png)
+   ![ThingSpeak Sign In 2](./media/image33.png)
 6. Das **vorher gewählte** Passwort angeben (Passwort für MathWorks Account) und einloggen.
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid18F773D7-D64C-534E-A51E-B1BCE0E11AFE.png](./media/image34.png)
-
+   ![ThingSpeak Log In](./media/image34.png)
 7. Meldung über die erfolgreiche Registrierung bestätigen.
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid47EC6924-4791-7941-B300-3BE869F4A0DF.png](./media/image35.png)
+   ![ThingSpeak Sign In Success](./media/image35.png)
 8. Den Nutzungsbedingungen zustimmen.
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid3DA73E68-838F-4546-B15B-13D5F28AD1EF.png](./media/image36.png)
+   ![ThingSpeak Terms of use](./media/image36.png)
 9. Damit ist die Registrierung abgeschlossen und ThingSpeak kann verwendet werden.
-   ![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidE2E685F4-7F4C-3941-AD37-495A15FE42B4.png](./media/image37.png)
+   ![ThingSpeak Main Page](./media/image37.png)
 
 Das Konto ist nun angelegt und wir können eigene **Channels** anlegen.
 
@@ -315,9 +284,9 @@ In unserem Beispiel sollen die gemessenen Temperaturwerte in einem Channel erfas
    ![ ThingSpeakTM Channels Y My Channels New Channel Apps Community](./media/image39.png)
 
 2. Channel Name: **motor\_1**, Field1: **Tu**
-   ![ ThingSpeakTM New Channel Apps Community Support Help How to Buy Account](./media/image40.png)
+   ![ ThingSpeak New Channel](./media/image40.png)
 3. Nach unten scrollen und "Save Channel"
-   ![ ThingSpeakTM Apps Community Support How to Buy Account Sign Out](./media/image41.png)
+   ![ ThingSpeak Save Channel](./media/image41.png)
 
 4. Damit steht ein neuer Channel "motor\_1" bereit. Ein leeres Diagramm wird automatisch erstellt und kann später angepasst werden. Wichtig ist die Channel ID, sie wird später noch benötigt.
    ![Channel ID: 381619](./media/image42.png)
@@ -348,10 +317,10 @@ Der Client, in unserem Fall der LoPy, muss sich gegenüber ThingSpeak authentifi
 ThingSpeak erstellt für jeden Channel automatisch zwei Schlüssel: Einen **Write API Key** und eine **Read API Key**.
 
 1. Die Schlüssel finden wir unter Channels --\> My Channels
-   ![hingSpeakTM My Channel New Channel Name motor\_l Channels Apps My Channels Wa](./media/image43.png)
+   ![ThingSpeak MyChannel Motor_1](./media/image43.png)
 2. Channel *motor\_1* auswählen; *API Keys* auswählen
    ![Channel ID: 381619 Messwerte Motor](./media/image44.png)
-   ![Requests Update a ChannelFeed GET https://api ](./media/image45.png)
+   ![Requests Update a ChannelFeed](./media/image45.png)
 
 ##### Write API Key
 
@@ -375,7 +344,7 @@ Wir können das Feld "Update a Channel Feed" kopieren, anpassen und im Browser (
    `GET https://api.thingspeak.com/update?api_key=UPTTFJC3VVxxxxxx\&field1=0`
 2. Das GET muss entfernt werden, der Webbrowser sendet standardmäßig einen GET Request:
    `https://api.thingspeak.com/update?api_key=UPTTFJC3VVxxxxxx\&field1=0`
-3. Der Temperaturwert steht in unserem Channel motor\_1 im Feld 1 (Tu). Wir senden den Wert 19.9 an den Channel. Im Parameter api\_key muss der "Write API Key" mitgesendet werden, der für jeden Channel einen eigenen Wert besitzt.
+3. Der Temperaturwert steht in unserem Channel *motor\_1* im Feld 1 (Tu). Wir senden den Wert 19.9 an den Channel. Im Parameter api\_key muss der "Write API Key" mitgesendet werden, der für jeden Channel einen eigenen Wert besitzt.
    `https://api.thingspeak.com/update?api_key=UPTTFJC3VVxxxxxx\&field1=19.9`
 4. In unserem Channel sehen wir nun den ersten Datenpunkt.
    [https://thingspeak.com/channels/**381619**/private_show](https://thingspeak.com/channels/381619/private_show)
@@ -412,17 +381,17 @@ Auch für die Fehlersuche ist das Programm Postman sehr empfehlenswert.
 Für die Fehlersuche ist es oft nützlich zu sehen, was beim Server überhaupt ankommt. Diese Frage kann RequestBin beantworten.
 [<span class="underline">https://requestb.in</span>](https://requestb.in)
 
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid1E6F0465-F4DD-6742-9F7C-961ECD2894D6.png](./media/image48.png)
+![Inspect HTTP Requests](./media/image48.png)
 
 „Create a RequestBin“ liefert eine URL zurück, an die beliebige http-Aufrufe gesendet werden können.
 
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cid72FCCCC2-E12E-2F40-AC24-11BFB6467FB6.png](./media/image49.png)
+![RequestBin URL](./media/image49.png)
 
 **Beispiel:** Der Aufruf
 [<span class="underline">https://requestb.in/uii7yqui?api\_key=UPTTFJC3VV33GQ\&field1=19.0</span>](https://requestb.in/uii7yqui?api_key=UPTTFJC3VV33GQ&field1=19.0)
 liefert
 
-![/var/folders/mc/0znsgsfs1k57tgy34d32f\_f00000gn/T/com.microsoft.Word/WebArchiveCopyPasteTempFiles/cidA65591AC-0015-2E42-8D1C-72BD6A874CAE.png](./media/image50.png)
+![HTTP Request Details](./media/image50.png)
 
 Die vom Server empfangenen Parameter und Header werden detailliert aufgelistet. Nach spätesten 48h wird die URL automatisch gelöscht.
 
@@ -494,7 +463,7 @@ publiziert werden.
 ##### Publish testen
 
 Die Authentifizierung des Clients erfolgt auch hier wieder über API Keys. Für den Verbindungsaufbau muss einmalig zuerst ein MQTT API Key generiert werden.
-![ MQTT-API-Key](./media/image55.png)
+![MQTT-API-Key](./media/image55.png)
 ![MQTT API Key](./media/image56.png)
 
 Wir können nun mit einem Online MQTT Client einen Temperaturwert an unseren ThingSpeak Channel senden. Dieser Test empfiehlt sich, bevor wir mit unserem eigenen Programm vom LoPy aus publizieren.
@@ -608,9 +577,11 @@ Nach einem „Sync“ sollte nun alle 30s ein Temperaturwert an unseren ThingSpe
 **Achtung:** Mit einem kostenlosen ThingSpeak Konto kann höchstens alle 15s ein Update an den Channel gesendet werden. Bezahlte Konten dürfen einmal pro Sekunde updaten.
 
 # Auswertung der Daten mit MATLAB und IFTTT
+
 Die Temperaturmesswerte sind nun auf ThingSpeak in einem Channel gespeichert und können jetzt ausgewertet werden. Mit MATLAB und den Toolboxen verfügt die ThingSpeak Plattform über eine sehr leistungsfähige Auswertung.
 
 ## Neuer Channel für die Auswertung
+
 Laut unserer Aufgabenstellung müssen wir den Unterschied zwischen zwei aufeinanderfolgenden Werten berechnen. Das Ergebnis schreiben wir in einen neuen Channel.
 
 Warum schreiben wir nicht in ein anderes Feld im gleichen Channel?
@@ -628,7 +599,7 @@ Mit einem neuen Channel:
 2.  MATLAB Auswertung
 3.  Ergebnis in Feld 1 Channel **motor\_1\_calc** schreiben
 
-### Neuen Channel „motor\_1\_calc“ anlegen
+### Neuen Channel *motor\_1\_calc* anlegen
 
 Den Channel „motor\_1\_calc“ wie bereits unter "Neuen Channel erstellen" beschrieben erstellen.
 ![](./media/image66.png)
@@ -669,7 +640,7 @@ end
 ```
 
 Download Programmcode:
-[<span class="underline">Delta\_Tu.m</span>](https://htlbr-my.sharepoint.com/personal/kurt_albrecht_htl-bregenz_ac_at/_layouts/15/guestaccess.aspx?docid=0ca7ce381cd6e4156b9a9ec352c5b8cff&authkey=AeqTq0HZsin1srDJhDsHiZU&e=e219ef2ca0c24090bf7880a6a512b9f5)
+[<span class="underline">Delta\_Tu.m</span>](./media/Delta_Tu.m)
 
 ### Reaktion auf neuen Temperaturwert
 
