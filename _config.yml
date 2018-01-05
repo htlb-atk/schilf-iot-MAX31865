@@ -2,3 +2,4 @@ theme: jekyll-theme-slate
 baseurl: /schilf-iot-MAX31865
 description: Schritt-für-Schritt Anleitung zur Erstellung einer IoT Anwendung mit LoPy, ThingSpeak und IFTTT.
 show_downloads: "true"
+title: IoT Workshop
