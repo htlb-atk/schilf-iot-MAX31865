@@ -2,14 +2,14 @@
 title: IoT Workshop HTLB
 author: Kurt Albrecht
 ---
-# Übersicht
+# IoT Workshop
 
 In diesem Workshop erstellen wir gemeinsam eine einfache IoT Anwendung.
 
 Wir messen mit einem Sensor die Temperatur einer Maschine, verbinden den Sensor über SPI -Bus mit einem IoT-Controller (LoPy) und übertragen die Messwerte zur ThingSpeak Plattform in die Cloud. Dort stellen wir die Messwerte graphisch dar und analysieren sie. Wenn der Temperaturgradient zu groß ist, wird eine E-Mail Nachricht auf das Handy gesendet.
 <!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Übersicht](#übersicht)
+- [IoT Workshop](#iot-workshop)
 	- [Komponenten einer IoT Anwendung](#komponenten-einer-iot-anwendung)
 	- [Übersicht Datenfluss und Kommunikation](#übersicht-datenfluss-und-kommunikation)
 - [Das „Ding“: LoPy](#das-ding-lopy)
