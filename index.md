@@ -647,7 +647,7 @@ Mit einem neuen Channel:
 
 ### Neuen Channel *motor\_1\_calc* anlegen
 
-Den Channel „motor\_1\_calc“ wie bereits unter "Neuen Channel erstellen" beschrieben erstellen.
+Den Channel „motor\_1\_calc“ wie bereits unter "Neuen Channel erstellen" beschrieben erstellen.  
 ![](./media/image66.png)
 
 ### MATLAB Analysis
@@ -738,8 +738,10 @@ verbindet, E-Mail versenden ist eine von sehr vielen möglichen Aktionen.
 ![](./media/image83.png) ![](./media/image84.png) ![](./media/image85.png)
 
 ## IFTTT mit ThingSpeak verbinden
+
 Wie können wir nun das Trigger-Ereignis *Motor1TuRisingFast* von ThingSpeak aus mit ThingHTTP an IFTTT senden? Die IFTTT Webhooks Dokumentation hilft uns weiter.
 ### Webhooks Dokumentation
+
 1. Services auswählen
 ![](./media/image86.png)
 2. Dokumentation öffnen
@@ -753,13 +755,12 @@ Wie können wir nun das Trigger-Ereignis *Motor1TuRisingFast* von ThingSpeak aus
 „Test It“ löst den Trigger aus, die Aktion „E-Mail senden“ wird ausgeführt. Innerhalb weniger Sekunden sollte die E-Mail von IFTTT eintreffen. Man könnte auch die https-Zeile in den Browser kopieren und die Seite abrufen.
 
 ### ThingHTTP Request erstellen
-Das Format für den Web-Request ist jetzt bekannt und wir können in
-ThingSpeak die ThingHTTP App konfigurieren.
+
+Das Format für den Web-Request ist jetzt bekannt und wir können in ThingSpeak die ThingHTTP App konfigurieren.  
 ![](./media/image89.png)
 
 ### React erstellen
-Immer wenn die Temperaturerhöhung zwischen aufeinanderfolgenden Werten
-größer als 20°C ist, soll ThingHTTP einen Web-Request an IFTTT senden,
-IFTTT sendet dann eine E-Mail.
+
+Immer wenn die Temperaturerhöhung zwischen aufeinanderfolgenden Werten größer als 20°C ist, soll ThingHTTP einen Web-Request an IFTTT senden, IFTTT sendet dann eine E-Mail.  
 ![](./media/image90.png)
 ![](./media/image93.png)
