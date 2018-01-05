@@ -393,8 +393,8 @@ Wir können das Feld "Update a Channel Feed" kopieren, anpassen und im Browser (
 3. Der Temperaturwert steht in unserem Channel *motor\_1* im Feld 1 (Tu). Wir senden den Wert 19.9 an den Channel. Im Parameter api\_key muss der "Write API Key" mitgesendet werden, der für jeden Channel einen eigenen Wert besitzt.
    `https://api.thingspeak.com/update?api_key=UPTTFJC3VVxxxxxx\&field1=19.9`
 4. In unserem Channel sehen wir nun den ersten Datenpunkt.
-   [https://thingspeak.com/channels/**381619**/private_show](https://thingspeak.com/channels/381619/private_show)
-   Channel ID **381619** durch die **eigene Channel ID** ersetzen\!
+   [https://thingspeak.com/channels/**381619**/private_show](https://thingspeak.com/channels/381619/private_show)   
+   Channel ID **381619** durch die **eigene Channel ID** ersetzen\!   
    ![show channel](./media/image46.png)
 
 **Achtung:** Mit einem kostenlosen ThingSpeak Konto kann höchstens alle 15s ein Update an den Channel gesendet werden. Bezahlte Konten dürfen einmal pro Sekunde updaten.
@@ -519,9 +519,9 @@ Einen freien MQTT Client gibt es unter:
 
 1. Für den Verbindungsaufbau wird der **MQTT API Key** benötigt.
    ![hivemqtt websocket client](./media/image57.png)
-2. Wir publizieren nun einen neuen Temperaturwert 21.0 auf das Topic
-  `channels/381619/publish/fields/field1/UPTTFJC3VVxxxxxx`
-   Bitte die eigene `Channel Id` und eigenen `Write API Key` verwenden.
+2. Wir publizieren nun einen neuen Temperaturwert 21.0 auf das Topic   
+  `channels/381619/publish/fields/field1/UPTTFJC3VVxxxxxx`   
+   Bitte die eigene `Channel Id` und eigenen `Write API Key` verwenden.   
   ![Publish](./media/image58.png)
 3. Der neue Wert wird sofort in unserem Channel angezeigt:
    ![Channel View](./media/image59.png)
