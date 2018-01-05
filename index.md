@@ -1,8 +1,6 @@
 ---
 title: IoT Workshop HTLB
 author: Kurt Albrecht
-description: Schritt-für-Schritt Anleitung zur Erstellung einer IoT Anwendung mit LoPy, ThingSpeak und IFTTT.
-show_downloads: "true"
 ---
 # IoT Workshop
 
