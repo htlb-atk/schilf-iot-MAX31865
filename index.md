@@ -794,3 +794,6 @@ Beispiele:
 - Cloud Service: ThingWorx, Linuxserver mit InfluxDB
 - Visualisieren: grafana
 - Reagieren: Zapier
+
+Zusammengestellt von Kurt Albrecht, HTL Bregenz.
+letzte Änderung: 2018-01-07
