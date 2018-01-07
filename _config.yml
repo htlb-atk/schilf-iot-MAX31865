@@ -3,3 +3,4 @@ baseurl: /schilf-iot-MAX31865
 description: Schritt-für-Schritt Anleitung zur Erstellung einer IoT Anwendung mit LoPy, ThingSpeak und IFTTT.
 show_downloads: "true"
 title: IoT Workshop
+google_analytics: UA-112078097-1

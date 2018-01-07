@@ -795,5 +795,6 @@ Beispiele:
 - Visualisieren: grafana
 - Reagieren: Zapier
 
+
 Zusammengestellt von Kurt Albrecht, HTL Bregenz.  
 Letzte Änderung: 2018-01-07
