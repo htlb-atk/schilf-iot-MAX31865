@@ -52,6 +52,7 @@ Wir messen mit einem Sensor die Temperatur einer Maschine, verbinden den Sensor 
 		- [Webhooks Dokumentation](#webhooks-dokumentation)
 		- [ThingHTTP Request erstellen](#thinghttp-request-erstellen)
 		- [React erstellen](#react-erstellen)
+- [Zusammenfassung](#zusammenfassung)
 
 <!-- /TOC -->
 
@@ -103,7 +104,8 @@ Für Eigenentwicklungen sind auch OEM Boards erhältlich.
 
 ## Expansion Board
 
-![](./media/image7.png)Die Hard- und Softwareentwicklung wird durch das Expansion Board erleichtert:
+![](./media/image7.png)   
+Die Hard- und Softwareentwicklung wird durch das Expansion Board erleichtert:
 
   - LoPy Anschlüsse auf Pfosten geführt,
   - USB-Anschluss für Anschluss an einen PC,
@@ -190,7 +192,7 @@ Die gesamte Kommunikation mit dem MAX31865 ist in einer Klasse
 
 ### Anwendung der Klasse lopy\_max31865
 
-Die Klasse „lopy\_max31865.py“ stellt die Verbindung zum Interface-Board her. Dort wird die ganze Kommunikation mit dem IC MAC31865 abgewickelt. Auch die Umrechnung der 15bit-Zahl in eine Temperatur in °C erfolgt in dieser Klasse. Der Anwender kann mit der Methode „read()“ die Temperatur auslesen.
+Die Klasse „lopy\_max31865.py“ stellt die Verbindung zum Interface-Board her. Dort wird die ganze Kommunikation mit dem IC MAX31865 abgewickelt. Auch die Umrechnung der 15bit-Zahl in eine Temperatur in °C erfolgt in dieser Klasse. Der Anwender kann mit der Methode „read()“ die Temperatur auslesen.
 
 ```python
    # Die Klasse lopy_max31865 in das eigene Programm importieren  
@@ -301,7 +303,7 @@ Für diesen Workshop verwenden wir ein Gratiskonto von ThingSpeak. ThingSpeak is
    ![ThingSpeak Sign In](./media/image32.png)
 5. Schul-E-Mail-Adresse eingeben
    ![ThingSpeak Sign In 2](./media/image33.png)
-6. Das **vorher gewählte** Passwort angeben (Passwort für MathWorks Account) und einloggen.
+6. Das **vorher gewählte** Passwort angeben (Passwort für MathWorks Account) und einloggen.  
    ![ThingSpeak Log In](./media/image34.png)
 7. Meldung über die erfolgreiche Registrierung bestätigen.
    ![ThingSpeak Sign In Success](./media/image35.png)
@@ -320,7 +322,7 @@ abgespeichert werden.
 
 In ThingSpeak werden die Werte in sogenannten "Channels" organisiert. Man kann sich einen Channel wie eine Tabelle mit (fast) beliebig vielen Zeilen und maximal acht Datenspalten (Feldern) vorstellen. Immer wenn über das Internet neue Werte an den Channel gesendet werden, wird eine neue Zeile erstellt. Zusätzlich zu den Datenspalten wird noch ein Zeitstempel (created\_at) generiert und eine laufende Nummer (entry\_id) vergeben.
 
-Beispiel für eine Tabelle mit einem Datenfeld:
+Beispiel für eine Tabelle mit einem Datenfeld:   
 ![channeldata](./media/image38.png)
 
 ### Neuen Channel erstellen
@@ -433,8 +435,8 @@ Für die Fehlersuche ist es oft nützlich zu sehen, was beim Server überhaupt a
 
 ![RequestBin URL](./media/image49.png)
 
-**Beispiel:** Der Aufruf
-[<span class="underline">https://requestb.in/uii7yqui?api\_key=UPTTFJC3VV33GQ\&field1=19.0</span>](https://requestb.in/uii7yqui?api_key=UPTTFJC3VV33GQ&field1=19.0)
+**Beispiel:** Der Aufruf   
+[<span class="underline">https://requestb.in/uii7yqui?api\_key=UPTTFJC3VV33GQ\&field1=19.0</span>](https://requestb.in/uii7yqui?api_key=UPTTFJC3VV33GQ&field1=19.0)   
 liefert
 
 ![HTTP Request Details](./media/image50.png)
@@ -496,14 +498,14 @@ Der ThingSpeak MQTT Broker ist unter der URL `mqtt.thingspeak.com` erreichbar. D
 ##### Topic
 
 Jedes Feld in einem Channel ist ein eigenes Topic auf das geschrieben (published) oder das abonniert (subscribed) werden kann.
-Das Topic ist folgendermaßen aufgebaut:
-`channels/channelID/publish/fields/field/<fieldnumber>/<apikey>`
+Das Topic ist folgendermaßen aufgebaut:  
+`channels/channelID/publish/fields/field/<fieldnumber>/<apikey>`  
 **Beispiel:**
 ![Thingspeak Topic](./media/image53.png)
 ![Thingspeak WriteAPI Key](./media/image54.png)
 
-Ein neuer Temperaturwert muss also auf das Topic
-`channels/**381619**/publish/fields/**field1**/UPTTFJC3VVxxxxxx`
+Ein neuer Temperaturwert muss also auf das Topic  
+`channels/**381619**/publish/fields/**field1**/UPTTFJC3VVxxxxxx`  
 publiziert werden.
 
 ##### Publish testen
@@ -764,3 +766,30 @@ Das Format für den Web-Request ist jetzt bekannt und wir können in ThingSpeak 
 Immer wenn die Temperaturerhöhung zwischen aufeinanderfolgenden Werten größer als 20°C ist, soll ThingHTTP einen Web-Request an IFTTT senden, IFTTT sendet dann eine E-Mail.  
 ![](./media/image90.png)
 ![](./media/image93.png)
+
+In der Abbildung ist ein *temp_delta* von 10°C eingetragen, das Austesten wird dadurch erleichtert.
+
+Unsere erste IoT Anwendung ist nun fertig!
+
+# Zusammenfassung
+In diesem Workshop haben wir alle Komponenten einer IoT-Anwendung kennengelernt.  
+
+- Sensor: PT100 Temperatursensor
+- Interface: SPI
+- Mikrocontroller: LoPy
+- Netzwerkzugang: WLAN
+- Cloud Service: ThingSpeak
+- Analysieren: MATLAB
+- Visualisieren: ThingSpeak
+- Reagieren: React / IFTTT
+
+Jede dieser Komponenten kann einfach ausgetauscht werden, da sie über Standardprotokolle miteinander in Verbinung stehen.  
+Beispiele:  
+
+- Sensor: einfache Schalter, Barometer, 6DOF-Sensor, GPS
+- Interface: I2C Bus
+- Mikrocontroller: Arduino, C32000, Raspberry
+- Die WLAN-Anbindung kann leicht durch eine LoRaWAN-Anbindung an TheThingsNetwork (TTN) ausgetauscht werden.
+- Cloud Service: ThingWorx, Linuxserver mit InfluxDB
+- Visualisieren: grafana
+- Reagieren: Zapier
