@@ -83,6 +83,7 @@ Der Workshop gliedert sich in folgende Teilaufgaben:
   - Mit IFTTT auf Temperaturänderung reagieren
 
 ## Übersicht Datenfluss und Kommunikation
+Das folgende Diagramm zeigt das Zusammenspiel der einzelnen Komponenten und ist die **wichtigste Abbildung** in diesem Workshop. Das Diagramm liefert den roten Faden. Wenn der Überblick verloren geht, bitte an diesem Diagramm neu orientieren. Es muss zu jedem Zeitpunkt klar sein, an welchem "Kästchen" wir arbeiten.
 
 ![](./media/image4.png)
 
