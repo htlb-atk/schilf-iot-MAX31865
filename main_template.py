@@ -20,7 +20,7 @@ for net in nets:
 rtd = MAX31865()
 
 # Connect to thingspeak; password= MQTT API Key
-thingspeak = MQTTClient("fe058e3f82b94a968fb8bc10ccc", "52.5.134.229", port=1883, user="atkiot", password="MQTT_API_KEY")
+thingspeak = MQTTClient("fe058e3f82b94a968fb8bc10ccc", "mqtt.thingspeak.com", port=1883, user="atkiot", password="MQTT_API_KEY")
 thingspeak.connect(clean_session=True)
 while True:
     temp = rtd.read()
