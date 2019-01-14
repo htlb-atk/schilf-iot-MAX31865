@@ -26,6 +26,7 @@ while True:
     temp = rtd.read()
     print('Temperatur: ',temp)
     # publish temp
+    # replace CHANNEL_ID and WRITE_API_KEY with values
     thingspeak.publish("channels/CHANNEL_ID/publish/fields/field1/WRITE_API_KEY",str(temp));
     time.sleep(30)
 thingspeak.disconnect()
