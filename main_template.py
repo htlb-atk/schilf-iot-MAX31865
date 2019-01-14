@@ -26,6 +26,6 @@ while True:
     temp = rtd.read()
     print('Temperatur: ',temp)
     # publish temp
-    thingspeak.publish("channels/347424/publish/fields/field1/WRITE_API_KEY",str(temp));
+    thingspeak.publish("channels/CHANNEL_ID/publish/fields/field1/WRITE_API_KEY",str(temp));
     time.sleep(30)
 thingspeak.disconnect()
